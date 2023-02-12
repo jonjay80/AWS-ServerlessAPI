@@ -9,7 +9,7 @@ const Login = (props) => {
   const [loggingIn, setLoggingIn] = useState(false);
 
   const loginUrl =
-  "https://kz9gwbc4fa.execute-api.us-east-1.amazonaws.com/v1/login";
+  process.env.REACT_APP_API_URL + "/login";
 
 
   const submitHandler = (event) => {
@@ -23,7 +23,7 @@ const Login = (props) => {
     setMessage(null);
     const requestConfig = {
       headers: {
-        "x-api-key": "IbEUeOYCnqVCMCeD5LHf3viVpKXYnAw6KwZZgOL8",
+        "x-api-key": process.env.REACT_APP_API_KEY,
       },
     };
 

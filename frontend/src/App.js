@@ -19,7 +19,7 @@ function App() {
   const [isAuthenticating, setIsAuthenticating] = useState(true);
 
   const verifyTokenUrl =
-    "https://kz9gwbc4fa.execute-api.us-east-1.amazonaws.com/v1/verify";
+  process.env.REACT_APP_API_URL + "/verify";
 
   useEffect(() => {
     const token = getToken();
@@ -33,7 +33,7 @@ function App() {
     }
     const requestConfig = {
       headers: {
-        "x-api-key": "IbEUeOYCnqVCMCeD5LHf3viVpKXYnAw6KwZZgOL8",
+        "x-api-key": process.env.REACT_APP_API_KEY,
       },
     };
     const requestBody = {
