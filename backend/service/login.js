@@ -8,7 +8,7 @@ const bcrypt = require("bcryptjs");
 const auth = require("../utils/auth");
 
 const dynamodb = new AWS.DynamoDB.DocumentClient();
-const userTable = "jjay-test";
+const userTable = process.env.NODE_ENV_DB_TABLE_NAME;
 
 const login = async (user) => {
   const username = user.username;
