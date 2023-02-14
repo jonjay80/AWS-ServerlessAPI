@@ -13,13 +13,12 @@ module.exports = {
   },
 
   setUserSession: (user, token) => {
-    sessionStorage.setItem('user', JSON.stringify(user));
-    sessionStorage.setItem('token', token);
+    sessionStorage.setItem("user", JSON.stringify(user));
+    sessionStorage.setItem("token", token);
   },
 
   resetUserSession: () => {
-    sessionStorage.removeItem('user');
-    sessionStorage.removeItem('token');
-  }
-
+    sessionStorage.removeItem("user");
+    sessionStorage.removeItem("token");
+  },
 };
