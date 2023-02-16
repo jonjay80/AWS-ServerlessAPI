@@ -4,7 +4,6 @@ import Home from "./components/Home";
 import Login from "./components/Login";
 import Register from "./components/Register";
 import PremiumContent from "./components/PremiumContent";
-import PublicRoute from "routes/PublicRoute";
 import PrivateRoute from "routes/PrivateRoute";
 import axios from "axios";
 import {
@@ -57,7 +56,7 @@ const App = () => {
 
   return (
     <div className="App">
-      <BrowserRouter forceRefresh={false}>
+      <BrowserRouter forceRefresh={true}>
         <header>
           <h1 className="site-heading text-center text-faded d-none d-lg-block">
             <span className="site-heading-upper text-primary mb-3">
