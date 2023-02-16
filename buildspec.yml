@@ -1,0 +1,11 @@
+version: 0.2
+
+phases:
+  build:
+    commands:
+      - echo Copying files to S3 bucket...
+      - ls -la
+      - aws s3 cp --recursive . "s3://jjay-login-bucket" 
+  post_build:
+    commands:
+      - echo Build completed on `date`
